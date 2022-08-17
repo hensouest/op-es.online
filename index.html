@@ -96,8 +96,39 @@
 						<!-- Contact -->
 							<article id="contact">
 								<h2 class="major">notificação</h2>
-								 Nenhuma notificação 
+								 Input
+TABAJARA(20);
 
+
+
+begin
+  se (media(TABAJARA,close)>(media(TABAJARA,close[1])))
+    entao PaintBar(RGB(0,255,0))
+
+    Senao se (media(TABAJARA,close)< (media(TABAJARA,close[1])))
+     entao PaintBar(RGB(255,0,0));
+
+end;
+
+
+input
+  Tamanho_Candle(200);
+
+begin
+  if (Madridtrendsqueeze(34)<0)
+  e (Madridtrendsqueeze(34)>(Madridtrendsqueeze(34)[1]))
+  e (maxima-minima<Tamanho_candle)
+  e (abertura<=fechamento)
+ entao paintbar (clred);
+
+  if (Madridtrendsqueeze(34)>0)
+  e (Madridtrendsqueeze(34)<(Madridtrendsqueeze(34)[1]))
+  e (maxima-minima<Tamanho_candle)
+  e (abertura>=fechamento)
+ entao paintbar (clgreen);
+
+
+fim;
 							</article>
 
 
