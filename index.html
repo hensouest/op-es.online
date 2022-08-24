@@ -34,8 +34,7 @@
 					
 						</div>
 						<nav>
-<script src="https://my.forms.app/static/feedback.js" type="text/javascript">  FormsAppFeedbackButton({ formId: "630684ac76ece330d764ae75", buttonText: "Feedback", buttonTextColor: "#FFFFFF", buttonBackground: "#11c4e0", verticalAlligment: "middle", horizontalAlligment: "right", width: 500,height: 400}); </script>
-							<ul>
+						<ul>
 								<li><a href="#intro">Pagamento</a></li>
 								<li><a href="#work">Produtos</a></li>
 								<li><a href="#about">acumulado</a></li>
@@ -78,14 +77,11 @@
 			</script>
 						<!-- About -->
 							<article id="about">
-								<h2 class="major">acumulado</h2>
+								<h2> class="major">acumulado</h2>
 								<P>valor:100</P>
 Desconto de 20 reais para os 5 pontos sorteados 
 <article id="about">
-								<h2 class="major">produtos</h2>
-								<span class="image main"><img src="https://resulta.do/AZUzOYm_zS6eR" alt="pic01" /></span>
-								<p></p>
-								<p>nenhum produto disponível</p>
+								
 							</article>
 
 							</article>
@@ -95,40 +91,9 @@ Desconto de 20 reais para os 5 pontos sorteados
 
 						<!-- Contact -->
 							<article id="contact">
-								<h2 class="major">notificação</h2>
+								<h2> class="major">notificação</h2>
 								 Input
-TABAJARA(20);
 
-
-
-begin
-  se (media(TABAJARA,close)>(media(TABAJARA,close[1])))
-    entao PaintBar(RGB(0,255,0))
-
-    Senao se (media(TABAJARA,close)< (media(TABAJARA,close[1])))
-     entao PaintBar(RGB(255,0,0));
-
-end;
-
-
-input
-  Tamanho_Candle(200);
-
-begin
-  if (Madridtrendsqueeze(34)<0)
-  e (Madridtrendsqueeze(34)>(Madridtrendsqueeze(34)[1]))
-  e (maxima-minima<Tamanho_candle)
-  e (abertura<=fechamento)
- entao paintbar (clred);
-
-  if (Madridtrendsqueeze(34)>0)
-  e (Madridtrendsqueeze(34)<(Madridtrendsqueeze(34)[1]))
-  e (maxima-minima<Tamanho_candle)
-  e (abertura>=fechamento)
- entao paintbar (clgreen);
-
-
-fim;
 							</article>
 
 
