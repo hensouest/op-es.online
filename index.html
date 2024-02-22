@@ -83,7 +83,7 @@
 						</div>
 						<nav>
 							<ul>
-								<li><a href="#suplemento"><s>suplementos</s></a></li>
+								<li><a href="#suplementos">suplementos</a></li>
 								<li><a href="#acessorio"><s>acessórios</s></a></li>
 								<li><a href="#tr"><s>triplice.sports</s></a></li>
 								<!--<li><a href="#elements">Elements</a></li>-->
@@ -278,7 +278,41 @@
 
 <p1>valor:<s>79,99</s> por apenas 60,00</p1>
 							<center><p><a href="https://wa.me/+5585981768429">comprar</a></p></</center>
+								<!DOCTYPE html>
+<html>
+<body>
+
+<h2>Formulário de Contato</h2>
+
+<form action="enviar_email.php" method="post">
+  <label for="nome">Nome:</label><br>
+  <input type="text" id="nome" name="nome"><br>
+  <label for="email">Email:</label><br>
+  <input type="text" id="email" name="email"><br>
+  <label for="mensagem">Mensagem:</label><br>
+  <textarea id="mensagem" name="mensagem"></textarea><br><br>
+  <input type="submit" value="Enviar">
+</form>
+
+</body>
+</html>
+<?php
+$destinatario = "hs362613@gmail.com";
+$assunto = "Nova mensagem do formulário de contato";
+$nome = $_POST['nome'];
+$email = $_POST['email'];
+$mensagem = $_POST['mensagem'];
+$corpo_email = "Nome: $nome\nEmail: $email\nMensagem: $mensagem";
+$headers = "De: $email";
+
+// Enviar e-mail
+mail($destinatario, $assunto, $corpo_email, $headers);
+
+echo "Mensagem enviada com sucesso!";
+?>
+								
 								<hr>
+								
 
 							
 							
