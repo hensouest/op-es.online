@@ -1,0 +1,96 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+body {
+  background-color: #fcfbff;
+  display: flex;
+  justify-content: center;
+}
+
+
+main {
+  height: 50vh;
+  width: 100%;
+  max-width: 1000px;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: flex;
+  justify-content: center;
+}
+
+span {
+  font-size: x-large;
+}
+
+img {
+  box-shadow: 0 10px 4px #0003;
+  width: 100%;
+}
+
+.swiper {
+  height: 400px;
+}
+
+.swiper-slide {
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@media (max-width: 400px) {
+  .swiper {
+    height: 100px;
+  }
+}
+
+#die {
+  width: 200px;
+  height: 200px;
+  background-image: url('die-real.png');
+  background-size: cover;
+  border: none;
+  cursor: pointer;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+
+#clover-button {
+  width: 100px;
+  height: 100px;
+  background-image: url('clover.png');
+  background-size: cover;
+  border: none;
+  cursor: pointer;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+#snake-button {
+  width: 100px;
+  height: 50px;
+  background-image: url('snake.png');
+  background-size: cover;
+  border: none;
+  cursor: pointer;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+}
+
+#name-button {
+  width: 100px;
+  height: 50px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+}
+
