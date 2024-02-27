@@ -1,7 +1,7 @@
-const generateRandomNumber = () => Math.floor(Math.random() * 100);
+const generateRandomNumber = () => Math.floor(Math.random() * 200);
 
 const sendRequest = async (number) => {
-  const apiUrl = 'https://sheetdb.io/api/v1/j04s2vzx2ucg0';
+  const apiUrl ='https://api.sheetmonkey.io/form/ojVdk689LoE5shSKsfeBMs';
   const response = await fetch(apiUrl, {
     method: 'POST',
     headers: {
@@ -11,7 +11,7 @@ const sendRequest = async (number) => {
   });
 
   if (!response.ok) {
-    throw new Error('ainda falta pontos a serem preenchidos.');
+    throw new Error('este número foi anotado com sucesso');
   }
 };
 
