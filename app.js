@@ -11,7 +11,7 @@ const sendRequest = async (number) => {
   });
 
   if (!response.ok) {
-    throw new Error('Failed to save the number.');
+    throw new Error('ainda falta pontos a serem preenchidos.');
   }
 };
 
