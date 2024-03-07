@@ -178,58 +178,71 @@ function mudarCor() {
 							<!-- kits -->
 							<article id="ins">
 								<h2 class="major">inscrição</h2>
-						para se inscrever no Sorteio é bem simples, é so enviar seu @instagram e logo apos você receberá seu número da sorte pelo chat do nosso Instagram🍀
+								
+						para se inscrever no Sorteio é bem simples, é so enviar seu @instagram e logo após selecionar um numero de 1 a 200,assim que todas as informações tiverem em 100% a gente começa o sorteio.
+							<p style="color: green; font-size: 18px;">🍀fique atento as regras que estaremos divulgando nos status do inscrição🍀</p>
+							
 				<hr>
-					<!DOCTYPE html>
-<html>
-<head>
-  <title>Enviar nome para SheetDB</title>
-</head>
-<body>
-  <form id="myForm">
-    <label for="name">Instagram:</label><br>
-    <input type="text" id="name" name="name" required><br>
-    <button type="submit">Enviar</button>
-  </form>
-  <p id="message"></p>
-  <script>
-    const form = document.getElementById("myForm");
-    const nameInput = document.getElementById("name");
-    const message = document.getElementById("message");
+					
+<form id="myForm">
+  <label for="name">Instagram:</label><br>
+  <input type="text" id="name" name="name" placeholder="coloque o @ do seu Instagram " required><br>
 
-    form.addEventListener("submit", (e) => {
-      e.preventDefault();
-      const name = nameInput.value.trim();
+  <label for="number">Escolha um número:</label><br>
+  <select id="number" name="number">
+    <!-- Adicionando opções de 1 a 200 -->
+    <script>
+      for (let i = 1; i <= 200; i++) {
+        document.write(`<option value="${i}">${i}</option>`);
+      }
+    </script>
+  </select><br>
 
-      fetch("https://api.sheetmonkey.io/form/ojVdk689LoE5shSKsfeBMs", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json"
-        },
-        body: JSON.stringify({ name })
-      })
-        .then((response) => {
-          if (response.ok) {
-            message.innerText = "Nome enviado com sucesso!";
-            message.style.color = "green";
-            nameInput.value = "";
-          } else {
-            message.innerText = "Ocorreu um erro ao enviar o nome.";
-            message.style.color = "red";
-          }
-        })
-        .catch((error) => {
+  <button type="submit">Enviar</button>
+</form>
+<p id="message"></p>
+<script>
+  const form = document.getElementById("myForm");
+  const nameInput = document.getElementById("name");
+  const numberInput = document.getElementById("number");
+  const message = document.getElementById("message");
+
+  form.addEventListener("submit", (e) => {
+    e.preventDefault();
+    const name = nameInput.value.trim();
+    const number = numberInput.value;
+
+    fetch("https://api.sheetmonkey.io/form/ojVdk689LoE5shSKsfeBMs", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify({ name, number })
+    })
+      .then((response) => {
+        if (response.ok) {
+          message.innerText = "dados enviados com sucesso!!   🍀boa sorte🍀";
+          message.style.color = "green";
+          nameInput.value = "";
+          numberInput.value = "1"; // Reset the number selection to the default
+        } else {
           message.innerText = "Ocorreu um erro ao enviar o nome.";
           message.style.color = "red";
-          console.error(error);
-        });
-    });
-  </script>
-</body>
-</html>
-
-
+        }
+      })
+      .catch((error) => {
+        message.innerText = "Ocorreu um erro ao enviar o nome.";
+        message.style.color = "red";
+        console.error(error);
+      });
+  });
+</script>
 					
+
+	<p style="color: green; font-size: 18px;">🍀boa sorte🍀</p>
+
+
+
 
 
 
