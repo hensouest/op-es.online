@@ -49,15 +49,19 @@
 								<h1></h1>
 				<p>"olhe,compre, espere,e aproveite..."<br />
 								     
-							<p style="color: white; font-size: 10px;">fazendo a entrega do seu pedido em qualquer lugar que você estiver em Aratuba</p>
-							<p style="color: limegreen; font-size: 10px;">📍verifique a localização para saber aonde o entregador se encontra</p>
+							<p style="color: white; font-size: 10px;">fazendo a entrega do seu pedido em qualquer lugar que você estiver</p>
+							<p style="color: limegreen; font-size: 5px;">verifique a localização</p>
+							
 							</div>
 						</div>
 						<nav>
 							<ul>
-								<li><button><a href="#produtos">bebidas</a></li></button>
-								<button onclick="window.location.href='https://maps.app.goo.gl/FWfMkUvfWu6UcTdY7'">Localização</button>
-								<button onclick="window.location.href='https://wa.me/558596485894'">WhatsApp</button>
+							<li><button><a href="#drinks">                drinksㅤ </a></li></button>
+								<li><button><a href="#produtos">              bebidas</a></li></button>
+								<button onclick="window.location.href='https://maps.app.goo.gl/AP67ZDi5QcPdXAkh6'">Localização</button>
+								<button onclick="window.location.href='https://wa.me/558581369468'">WhatsApp</button>
+								
+								
 								<!--<li><a href="#elements">Elements</a></li>-->
 							</ul>
 						</nav>
@@ -99,6 +103,7 @@
  box-sizing: border-box;
  position: relative;
  }
+
  .produto img {
  max-width: 100%;
  height: auto;
@@ -139,7 +144,7 @@
 <div class="produto">
  <a href="images/conhaque.jpg" class="image-link"><img src="images/conhaque.jpg" alt="Produto 2"></a>
  <p >•Numero:01</p>
- conhaque dreher
+ conhaque dreear
  <p style="color: green; font-size: 15px;">R$ ??,??</p>
  </div>
  <div class="produto">
@@ -149,15 +154,15 @@
  <p style="color: green; font-size: 15px;">R$ ??,??</p>
  </div>
  <div class="produto">
- <a href="images/red.jpg" class="image-link"><img src="images/red.jpg" alt="Produto 2"></a>
+ <a href="images/ene.jpg" class="image-link"><img src="images/ene.jpg" alt="Produto 2"></a>
  <p >•Numero:03</p>
- red label 1l
+ energético 2l
  <p style="color: green; font-size: 15px;">R$ ??,??</p>
  </div>
  <div class="produto">
- <a href="images/ene.jpg" class="image-link"><img src="images/ene.jpg" alt="Produto 2"></a>
+ <a href="images/red.jpg" class="image-link"><img src="images/red.jpg" alt="Produto 2"></a>
  <p >•Numero:04</p>
- energético 2l
+ red label 1l
  <p style="color: green; font-size: 15px;">R$ ??,??</p>
  </div>
  <div class="produto">
@@ -239,7 +244,7 @@ $(document).ready(function() {
 function mudarCor() {
   var botao = document.getElementById("meuBotao");
   botao.style.backgroundColor = "green";
-  window.location.href = "https://wa.me/558596485894";
+  window.location.href = "https://wa.me/558581369468";
 }
 </script>
 
@@ -260,9 +265,16 @@ function mudarCor() {
 								<h2 class="major">atendimento</h2>
 						
 						</article>
-						
-						
-						
+						<!-- suplementos -->
+							<article id="drinks">
+								<h2 class="major">drinks</h2>
+					
+<center><img src="images/drink.jpg" width="350" height="700"</center>
+
+
+
+							
+							</article>
 						
 							<!-- kits -->
 							<article id="in">
@@ -715,64 +727,4 @@ print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
 
 					</div>
 				<footer id="footer">
-						<p class="copyright">responsável pelo sistema <a href="https://www.instagram.com/d2store.shop?igsh=MXNzazIxZmRucjllZg==">@d2store.shop</a>.</p>
-					</footer>
-				<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Carrossel de Frases</title>
-  <style>
-    .hidden {
-      display: none;
-    }
-  </style>
-</head>
-<body>
-
-<div id="carousel">
-  <p class="phrase"></p>
-  <p class="phrase hidden"></p>
-  <p class="phrase hidden"></p>
-</div>
-
-<script>
-  var phrases = document.querySelectorAll('.phrase');
-  var currentPhraseIndex = 0;
-
-  function showNextPhrase() {
-    phrases[currentPhraseIndex].classList.add('hidden');
-    currentPhraseIndex = (currentPhraseIndex + 1) % phrases.length;
-    phrases[currentPhraseIndex].classList.remove('hidden');
-  }
-
-  function startCarousel() {
-    setInterval(showNextPhrase, 15000); // Troca a cada 6 segundos (3000 milissegundos)
-  }
-
-  window.onload = startCarousel;
-</script>
-
-</body>
-</html>
-
-				<!-- Footer -->
-					<footer id="footer">
-						<p class="copyright"><a href="">""Persistência é o segredo do sucesso""</a></p>
-					</footer>
-
-			</div>
-
-		<!-- BG -->
-			<div id="bg"></div>
-
-		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
-
-	</body>
-</html>
+						<p class="copyright">
